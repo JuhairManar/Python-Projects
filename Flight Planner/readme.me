@@ -1,0 +1,23 @@
+Airport Flight Scheduler
+The Airport Flight Scheduler is a Python application designed to help travelers plan their flights efficiently. It provides functionalities to calculate distances between airports, determine ticket prices, and schedule various types of trips, including one-way and round-way trips.
+
+Features
+Airport Data: The application reads airport data from a CSV file containing information such as airport codes, names, locations, and currency rates.
+Distance Calculation: Utilizes latitude and longitude coordinates to compute the distance between two airports using the Haversine formula.
+Ticket Price Calculation: Calculates the ticket price for a given trip based on the distance between the airports and the currency rate.
+Trip Scheduling: Offers functionalities to schedule different types of trips, including one-way, round-way, and multi-city trips with fixed or flexible routes.
+
+Run the application:
+
+python main.py
+
+Usage
+Ensure that the required CSV files containing airport and country currency data are present in the specified directory (./data/ by default).
+
+Initialize the AllAirports class to load airport data and perform necessary calculations:
+
+Example
+
+world_tour = AllAirports()
+fare = world_tour.get_ticket_price('HEA', 'PRA')
+print('Ticket Fare:', fare)
